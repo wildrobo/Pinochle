@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CardGame;
+using static CardGame.Suit.SuitType;
 
 namespace Pinochle
 {
@@ -29,35 +30,32 @@ namespace Pinochle
         public int DoublePinochle { get; set; }
         public int MarriagesRound { get; set; }
 
-        public Suit.SuitType Suit { get; set; }
+        //public Meld()
+        //{
+        //    Suit = CardGame.Suit.SuitType.None;
+        //    Family = 15;
+        //    MarriageInTrump = 4;
+        //    Marriage = 2;
+        //    NineOfTrump = 1;
+        //    AcesRound = 10;
+        //    KingsRound = 8;
+        //    QueensRound = 6;
+        //    JacksRound = 4;
+        //    Pinochle = 4;
+        //    DoubleFamily = 150; ;
+        //    DoubleMarriageInTrump = 8;
+        //    DoubleMarriage = 4;
+        //    DoubleNineOfTrump = 2;
+        //    DoubleAcesRound = 150;
+        //    DoubleKingsRound = 80;
+        //    DoubleQueensRound = 60;
+        //    DoubleJacksRound = 40;
+        //    DoublePinochle = 30;
+        //    MarriagesRound = 24;
+        //}
 
         public Meld()
         {
-            Suit = CardGame.Suit.SuitType.None;
-            Family = 15;
-            MarriageInTrump = 4;
-            Marriage = 2;
-            NineOfTrump = 1;
-            AcesRound = 10;
-            KingsRound = 8;
-            QueensRound = 6;
-            JacksRound = 4;
-            Pinochle = 4;
-            DoubleFamily = 150; ;
-            DoubleMarriageInTrump = 8;
-            DoubleMarriage = 4;
-            DoubleNineOfTrump = 2;
-            DoubleAcesRound = 150;
-            DoubleKingsRound = 80;
-            DoubleQueensRound = 60;
-            DoubleJacksRound = 40;
-            DoublePinochle = 30;
-            MarriagesRound = 24;
-        }
-
-        public Meld(Suit.SuitType suit)
-        {
-            Suit = suit;
             Family = 15;
             MarriageInTrump = 4;
             Marriage = 2;
@@ -84,18 +82,15 @@ namespace Pinochle
             int totalMeld = 0;
             List<ICard> cards = hand.Cards;
 
-            //if (Suit == Suit.SuitType.None)
-            //{
-             //   throw new Exception("Trump must be set before you can calculate the meld value.");
-            //}
+            if (hand.Trump == None)
+            {
+                throw new Exception("Trump must be set before you can calculate the meld value.");
+            }
 
-            //if (hand.Cards.Contanins())
-            //{
+            //define cards for meld type
+            //test contains
 
-            //}
-
-
-                return totalMeld;
+            return totalMeld;
 
         }
     }

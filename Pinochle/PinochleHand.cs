@@ -36,16 +36,10 @@ namespace Pinochle
             return returnScore;
         }
 
-        public int GetMeld(Suit.SuitType trump)
+        public int GetMeld()
         {
-            int maxBid = 0;
-
-            //TODO: Implement Actual Bid Logic
-            Random rnd = new Random();
-            maxBid = rnd.Next(20, 35);
-            //End TODO
-
-            return maxBid;
+            var meld = new Meld();
+            return meld.Calculate(this);
         }
 
         public Suit.SuitType SelelctTrump(IHand hand)

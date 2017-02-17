@@ -40,5 +40,10 @@ namespace PinochleTestHelper
             };
             return cards;
         }
+
+        public static implicit operator PinochleCardTestHelper(PinochleHandTestHelper v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -7,7 +7,7 @@ namespace Pinochle
     {
         Suit.SuitType Trump { get; set; }
         int GetMaxBid();
-        int GetMeld(Suit.SuitType trump);
+        int GetMeld();
         List<ICard> PassToBidder(Suit.SuitType trump);
         List<ICard> PassToNonBidder(Suit.SuitType trump);
         int PlayCard(Suit.SuitType trump, List<IHand> cardsPlayed);

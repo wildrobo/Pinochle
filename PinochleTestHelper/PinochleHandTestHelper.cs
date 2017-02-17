@@ -11,7 +11,7 @@ namespace PinochleTestHelper
 {
     public class PinochleHandTestHelper
     {
-        public Mock<IPinochleHand> GetPinochleHand()
+        public IPinochleHand GetPinochleHand()
         {
             PinochleCardTestHelper cardHelper = new PinochleCardTestHelper();
             Mock<IHand> hand = new Mock<IHand>();
@@ -51,7 +51,7 @@ namespace PinochleTestHelper
             Mock<IPinochleHand> pinochleHand = new Mock<IPinochleHand>();
             pinochleHand.SetupProperty(x => x.Cards, cards);
 
-            return pinochleHand;
+            return pinochleHand.Object;
         }
         public List<IPinochleHand> GetTestHand()
         {

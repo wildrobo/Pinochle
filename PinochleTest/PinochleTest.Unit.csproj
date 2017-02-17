@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MeldTest.cs" />
     <Compile Include="PinochleCardTest.cs" />
     <Compile Include="PinochleDeckTest.cs" />
     <Compile Include="PinochleGameTest.cs" />
