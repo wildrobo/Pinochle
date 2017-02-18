@@ -45,6 +45,7 @@
     <Compile Include="IPinochleScore.cs" />
     <Compile Include="IPinocleScoreResult.cs" />
     <Compile Include="Meld.cs" />
+    <Compile Include="MeldType.cs" />
     <Compile Include="PinochleCard.cs" />
     <Compile Include="PinochleGame.cs" />
     <Compile Include="PinochleRound.cs" />

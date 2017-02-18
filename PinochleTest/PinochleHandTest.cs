@@ -50,12 +50,12 @@ namespace PinochleTest
         }
 
         [Test]
-        public void Meld()
+        public void GetMeldForHand()
         {
             IPinochleHand hand = new PinochleHand();
+            hand.Trump = Diamond;
             hand.Cards = _handHelper.GetTestCards();
-            SuitType trump = Diamond;
-            int maxBid = hand.GetMeld(trump);
+            int maxBid = hand.GetMeld();
 
             Assert.Fail();
         }

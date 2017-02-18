@@ -39,7 +39,9 @@ namespace Pinochle
         public int GetMeld()
         {
             var meld = new Meld();
-            return meld.Calculate(this);
+            var meld = meld.Calculate(this);
+
+            return 0;
         }
 
         public Suit.SuitType SelelctTrump(IHand hand)
