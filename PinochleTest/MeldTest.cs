@@ -16,21 +16,17 @@ namespace PinochleTest
     [TestFixture]
     class MeldTest
     {
-        PinochleHandTestHelper _handHelper;
+        //PinochleHandTestHelper _handHelper;
 
         [SetUp]
         public void Setup()
         {
-            _handHelper = new PinochleHandTestHelper();
+            
         }
 
         [Test]
         public void TestMeld()
         {
-
-            var hand = _handHelper.GetPinochleHand();
-            hand.GetMeld();
-            
 
 
         }

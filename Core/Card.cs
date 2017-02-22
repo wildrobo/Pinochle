@@ -15,11 +15,14 @@ namespace CardGame
         public IPlayer PlayedBy { get; set; }
         public int OrderPlayed { get; set; }
 
+        private string _key;
+
         public Card(string value, SuitType suit, int rank = 0)
         {
             Value = value;
             Suit = suit;
             Rank = rank;
+            _key = value + Enum.GetName(typeof(SuitType), suit) + rank.ToString();
         }
 
         #region "Equals"
@@ -48,8 +51,7 @@ namespace CardGame
 
         public override int GetHashCode()
         {
-            //TODO: Investigate should this return hash of Value,Suit, & Rank?
-            return base.GetHashCode();
+            return _key.GetHashCode();
         }
         #endregion
 
@@ -60,6 +62,11 @@ namespace CardGame
                 return Rank.CompareTo(card2.Rank);
             }
         //}
+
+        public override string ToString()
+        {
+            return _key;
+        }
 
 
     }

@@ -6,6 +6,7 @@ namespace Pinochle
     public interface IPinochleHand : IHand
     {
         Suit.SuitType Trump { get; set; }
+        Meld Meld { get; set; }
         int GetMaxBid();
         int GetMeld();
         List<ICard> PassToBidder(Suit.SuitType trump);

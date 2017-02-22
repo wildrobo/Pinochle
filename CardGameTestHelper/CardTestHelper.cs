@@ -20,6 +20,11 @@ namespace CardGameTestHelper
             card.Object.Value = value;
             card.Object.Suit = suit;
             card.Object.Rank = rank;
+            string key = value + Enum.GetName(typeof(SuitType), suit) + rank.ToString();
+            //card.Setup(m => m.ToString()).Returns(key);
+            card.Setup(m => m.ToString()).CallBase();
+            card.Setup(m => m.GetHashCode()).CallBase();
+            card.Setup(m => m.Equals(card)).CallBase();
             return card.Object;
         }
 

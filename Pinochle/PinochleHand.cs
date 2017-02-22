@@ -10,7 +10,7 @@ namespace Pinochle
     public class PinochleHand : Hand, IHand, IPinochleHand
     {
         public Suit.SuitType Trump { get; set; }
-        
+        public Meld Meld { get; set; }
 
         public PinochleHand()
         {
@@ -38,10 +38,9 @@ namespace Pinochle
 
         public int GetMeld()
         {
-            var meld = new Meld();
-            var meld = meld.Calculate(this);
-
-            return 0;
+            Meld = new Meld();
+            Meld.Calculate(this);
+            return Meld.MeldValue;
         }
 
         public Suit.SuitType SelelctTrump(IHand hand)

@@ -34,8 +34,36 @@ namespace CardGame
         }
 
         public bool Contains(List<ICard> cardsToMatch)
-        {        
-            return cardsToMatch.Except(Cards).Any();
+        {
+            List<ICard> copyOfCards = Cards.ConvertAll(x => x);
+
+            //TODO: Think there is a faster way to do this with LINQ
+            int indexOfSelectedCard = 0;
+            int cardCounter = 0;
+            int cardsFound = 0;
+            var returnVal = false;
+
+            do
+            {
+                indexOfSelectedCard = copyOfCards.IndexOf(cardsToMatch[cardCounter]);
+                if (indexOfSelectedCard >= 0)
+                {
+                    cardsFound ++;
+                    copyOfCards.RemoveAt(indexOfSelectedCard);
+                }
+                cardCounter++;
+            } while (indexOfSelectedCard >= 0 && cardCounter < cardsToMatch.Count);
+
+            if (cardsFound == cardsToMatch.Count())
+            {
+                returnVal = true;
+            }
+            else
+            {
+                returnVal = false;
+            }
+
+            return returnVal;
         }
 
     }

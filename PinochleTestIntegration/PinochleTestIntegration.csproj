@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PinochleHandTest.cs" />
     <Compile Include="PinochleRoundTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -50,6 +51,10 @@
     <ProjectReference Include="..\Core\CardGame.csproj">
       <Project>{733b29e1-36fc-43a0-88b4-5eb594cb486d}</Project>
       <Name>CardGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PinochleTestHelper\PinochleTestHelper.csproj">
+      <Project>{ff026ad3-9acc-4455-bfc3-476b65878a43}</Project>
+      <Name>PinochleTestHelper</Name>
     </ProjectReference>
     <ProjectReference Include="..\Pinochle\Pinochle.csproj">
       <Project>{a997d019-6664-41c1-9e1c-dcb1b866243d}</Project>

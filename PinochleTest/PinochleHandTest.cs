@@ -26,7 +26,7 @@ namespace PinochleTest
         [Test]
         public void GetMaxBid()
         {
-            var hand = _handHelper.GetTestCards();
+            //var hand = _handHelper.GetTestCards();
 
             Assert.Fail();
         }
@@ -52,12 +52,7 @@ namespace PinochleTest
         [Test]
         public void GetMeldForHand()
         {
-            IPinochleHand hand = new PinochleHand();
-            hand.Trump = Diamond;
-            hand.Cards = _handHelper.GetTestCards();
-            int maxBid = hand.GetMeld();
-
-            Assert.Fail();
+           
         }
 
         [Test]

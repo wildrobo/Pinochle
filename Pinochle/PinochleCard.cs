@@ -80,6 +80,6 @@ namespace Pinochle
             //TODO: Investigate should this return hash of Value,Suit, & Rank?
             return base.GetHashCode();
         }
-        #endregion
+        #endregion "Equals"
     }
 }
